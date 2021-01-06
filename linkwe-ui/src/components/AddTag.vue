@@ -80,7 +80,7 @@ export default {
         if (!form.weTags.length) {
           return;
         }
-        debugger;
+        // debugger;
         api[form.groupId ? "update" : "add"](form).then(() => {
           this.msgSuccess("操作成功");
           this.Pvisible = false;

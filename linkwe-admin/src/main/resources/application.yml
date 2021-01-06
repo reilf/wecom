@@ -9,7 +9,7 @@ ruoyi:
   # 实例演示开关
   demoEnabled: true
   # 文件路径 示例（ Windows配置D:/ruoyi/uploadPath，Linux配置 /home/ruoyi/uploadPath）
-  profile: /home/ruoyi/uploadPath
+  profile: E:/Upload
   # 获取ip地址开关
   addressEnabled: false
   # 验证码类型 math 数组计算 char 字符验证
@@ -20,7 +20,7 @@ ruoyi:
 # 开发环境配置
 server:
   # 服务器的HTTP端口，默认为8080
-  port: 8080
+  port: 9544
   servlet:
     # 应用的访问路径
     context-path: /
@@ -48,7 +48,8 @@ spring:
     # 国际化资源文件路径
     basename: i18n/messages
   profiles:
-    active: druid
+    active: prod
+
   # 文件上传
   servlet:
      multipart:
@@ -140,7 +141,7 @@ xss:
 # elasticsearch配置
 elasticsearch:
   schema: http
-  address: localhost
+  address: localhost:9200
   connectTimeout: 10000
   socketTimeout: 10000
   connectionRequestTimeout: 10000

@@ -19,3 +19,6 @@ velocity.log
 .DS_Store
 logs
 .m2
+
+LOG_PATH_IS_UNDEFINED/
+application-prod.yml

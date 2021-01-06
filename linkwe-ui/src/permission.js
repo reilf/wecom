@@ -34,6 +34,7 @@ router.beforeEach((to, from, next) => {
                 // 设置了企业微信，正常跳转
                 next({ ...to, replace: true }); // hack方法 确保addRoutes已完成
               } else {
+                console.log("测试方法是否执行了", res);
                 // 没有设置企业微信的
                 let isEnterpriseWechat = accessRoutes.findIndex((element) => {
                   element.path === '/_enterpriseWechat';
@@ -43,7 +44,7 @@ router.beforeEach((to, from, next) => {
                   next({ path: '/enterpriseWechat', replace: true });
                 } else {
                   // 没有权限的给予提示，并退回登录页面
-                  Message.error('没有设置企业微信的权限，请联系系统管理员');
+                  Message.error('没有设置企业微信的权限，请联系系统管理员11');
                   next({ path: '/login', replace: true });
                 }
               }
